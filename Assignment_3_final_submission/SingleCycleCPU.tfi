@@ -1,0 +1,18 @@
+
+
+
+// Instantiate the module
+SingleCycleCPU instance_name (
+    .clk(clk), 
+    .reset(reset), 
+    .iaddr(iaddr), 
+    .instr(instr), 
+    .daddr(daddr), 
+    .rdata(rdata), 
+    .wdata(wdata), 
+    .we(we), 
+    .PC(PC), 
+    .x31(x31)
+    );
+
+

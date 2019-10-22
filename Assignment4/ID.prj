@@ -1,0 +1,3 @@
+verilog work "Regfile.v"
+verilog work "Decoder.v"
+verilog work "ID.v"

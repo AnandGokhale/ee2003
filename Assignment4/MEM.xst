@@ -1,0 +1,5 @@
+set -tmpdir "/home/anand/EE2003/Assignment4/xst/projnav.tmp"
+set -xsthdpdir "/home/anand/EE2003/Assignment4/xst"
+elaborate
+-ifn MEM.prj
+-ifmt mixed

@@ -1,0 +1,1 @@
+vhdtdtfi -lang verilog -prj Assignment4 -o /home/anand/EE2003/Assignment4/MEM.tfi -lib work /home/anand/EE2003/Assignment4//MEM.v -module MEM -template /opt/tools/xilinx/ise/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 

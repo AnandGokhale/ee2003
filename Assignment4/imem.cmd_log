@@ -1,0 +1,1 @@
+vhdtdtfi -lang verilog -prj Assignment4 -o /home/anand/EE2003/Assignment4/imem.tfi -lib work /home/anand/EE2003/Assignment4//imem.v -module imem -template /opt/tools/xilinx/ise/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 

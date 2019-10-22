@@ -1,0 +1,4 @@
+verilog work "Regfile.v"
+verilog work "Decoder.v"
+verilog work "ALU.v"
+verilog work "CPU.v"

@@ -1,0 +1,32 @@
+Running: /opt/tools/xilinx/ise/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o /home/anand/EE2003/Assignment_3_final_submission/cpu_tb_isim_beh.exe -prj /home/anand/EE2003/Assignment_3_final_submission/cpu_tb_beh.prj work.cpu_tb work.glbl 
+ISim P.20131013 (signature 0xfbc00daa)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Analyzing Verilog file "/home/anand/EE2003/Assignment_3_final_submission/Regfile.v" into library work
+Analyzing Verilog file "/home/anand/EE2003/Assignment_3_final_submission/Decoder.v" into library work
+Analyzing Verilog file "/home/anand/EE2003/Assignment_3_final_submission/ALU.v" into library work
+Analyzing Verilog file "/home/anand/EE2003/Assignment_3_final_submission/imem.v" into library work
+Analyzing Verilog file "/home/anand/EE2003/Assignment_3_final_submission/dmem.v" into library work
+Analyzing Verilog file "/home/anand/EE2003/Assignment_3_final_submission/CPU.v" into library work
+Analyzing Verilog file "/home/anand/EE2003/Assignment_3_final_submission/cpu_tb.v" into library work
+Analyzing Verilog file "/opt/tools/xilinx/ise/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 95632 KB
+Fuse CPU Usage: 1000 ms
+Compiling module Decoder
+Compiling module Regfile
+Compiling module ALU
+Compiling module SingleCycleCPU
+Compiling module dmem
+Compiling module imem
+Compiling module cpu_tb
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 8 Verilog Units
+Built simulation executable /home/anand/EE2003/Assignment_3_final_submission/cpu_tb_isim_beh.exe
+Fuse Memory Usage: 655844 KB
+Fuse CPU Usage: 1030 ms
+GCC CPU Usage: 750 ms

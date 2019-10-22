@@ -1,0 +1,13 @@
+
+
+
+// Instantiate the module
+ALU instance_name (
+    .r1(r1), 
+    .r2(r2), 
+    .Op(Op), 
+    .rout(rout), 
+    .B(B)
+    );
+
+

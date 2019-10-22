@@ -1,0 +1,18 @@
+
+
+
+// Instantiate the module
+Decoder instance_name (
+    .instr(instr), 
+    .PC(PC), 
+    .Branch(Branch), 
+    .MemRead(MemRead), 
+    .RFSrc(RFSrc), 
+    .we(we), 
+    .ALUSrc(ALUSrc), 
+    .RegWrite(RegWrite), 
+    .imm(imm), 
+    .sign(sign)
+    );
+
+

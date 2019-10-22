@@ -1,0 +1,13 @@
+
+
+
+// Instantiate the module
+dmem instance_name (
+    .clk(clk), 
+    .daddr(daddr), 
+    .dwdata(dwdata), 
+    .we(we), 
+    .drdata(drdata)
+    );
+
+

@@ -1,0 +1,10 @@
+
+
+
+// Instantiate the module
+imem instance_name (
+    .iaddr(iaddr), 
+    .idata(idata)
+    );
+
+

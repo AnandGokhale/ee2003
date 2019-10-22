@@ -1,0 +1,3 @@
+verilog work "imem.v"
+verilog work "IF.v"
+verilog work "/opt/tools/xilinx/ise/14.7/ISE_DS/ISE//verilog/src/glbl.v"
