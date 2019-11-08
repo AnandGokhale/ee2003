@@ -1,0 +1,21 @@
+
+
+
+// Instantiate the module
+Pipelined_CPU instance_name (
+    .clk(clk), 
+    .reset(reset), 
+    .iaddr(iaddr), 
+    .idata(idata), 
+    .daddr(daddr), 
+    .drdata(drdata), 
+    .dwdata(dwdata), 
+    .we(we), 
+    .x31(x31), 
+    .y31(y31), 
+    .z31(z31), 
+    .n31(n31), 
+    .pc(pc)
+    );
+
+

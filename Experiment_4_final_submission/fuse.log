@@ -1,0 +1,50 @@
+Running: /opt/tools/xilinx/ise/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o /home/anand/EE2003/Experiment_4_final_submission/cpu_tb_isim_beh.exe -prj /home/anand/EE2003/Experiment_4_final_submission/cpu_tb_beh.prj work.cpu_tb work.glbl 
+ISim P.20131013 (signature 0xfbc00daa)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Analyzing Verilog file "/home/anand/EE2003/Experiment_4_final_submission/we_generator.v" into library work
+Analyzing Verilog file "/home/anand/EE2003/Experiment_4_final_submission/reg_write_generator.v" into library work
+Analyzing Verilog file "/home/anand/EE2003/Experiment_4_final_submission/Decoder.v" into library work
+Analyzing Verilog file "/home/anand/EE2003/Experiment_4_final_submission/ALU.v" into library work
+Analyzing Verilog file "/home/anand/EE2003/Experiment_4_final_submission/Stall_signal_generator.v" into library work
+Analyzing Verilog file "/home/anand/EE2003/Experiment_4_final_submission/Register_file.v" into library work
+Analyzing Verilog file "/home/anand/EE2003/Experiment_4_final_submission/MEM.v" into library work
+Analyzing Verilog file "/home/anand/EE2003/Experiment_4_final_submission/IF.v" into library work
+Analyzing Verilog file "/home/anand/EE2003/Experiment_4_final_submission/ID.v" into library work
+Analyzing Verilog file "/home/anand/EE2003/Experiment_4_final_submission/generate_next_PC.v" into library work
+Analyzing Verilog file "/home/anand/EE2003/Experiment_4_final_submission/forward_signal_generator.v" into library work
+Analyzing Verilog file "/home/anand/EE2003/Experiment_4_final_submission/EX.v" into library work
+Analyzing Verilog file "/home/anand/EE2003/Experiment_4_final_submission/Pipelined_CPU.v" into library work
+Analyzing Verilog file "/home/anand/EE2003/Experiment_4_final_submission/imem.v" into library work
+Analyzing Verilog file "/home/anand/EE2003/Experiment_4_final_submission/dmem.v" into library work
+Analyzing Verilog file "/home/anand/EE2003/Experiment_4_final_submission/CPU_tb.v" into library work
+Analyzing Verilog file "/opt/tools/xilinx/ise/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 95756 KB
+Fuse CPU Usage: 980 ms
+Compiling module IF
+Compiling module Stall_signal_generator
+Compiling module Register_file
+Compiling module Decoder
+Compiling module ID
+Compiling module ALU
+Compiling module we_generator
+Compiling module EX
+Compiling module reg_write_generator
+Compiling module MEM
+Compiling module forward_signal_generator
+Compiling module generate_next_PC
+Compiling module Pipelined_CPU
+Compiling module dmem
+Compiling module imem
+Compiling module cpu_tb
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 10 sub-compilation(s) to finish...
+Compiled 17 Verilog Units
+Built simulation executable /home/anand/EE2003/Experiment_4_final_submission/cpu_tb_isim_beh.exe
+Fuse Memory Usage: 656300 KB
+Fuse CPU Usage: 1050 ms
+GCC CPU Usage: 1460 ms

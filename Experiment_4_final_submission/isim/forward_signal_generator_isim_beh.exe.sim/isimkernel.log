@@ -1,0 +1,28 @@
+Command line:
+   forward_signal_generator_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  34975
+
+Fri Nov  8 23:24:13 2019
+
+
+ Elaboration Time: 0.05 sec
+
+ Current Memory Usage: 259.211 Meg
+
+ Total Signals          : 26
+ Total Nets             : 180
+ Total Signal Drivers   : 8
+ Total Blocks           : 2
+ Total Primitive Blocks : 2
+ Total Processes        : 10
+ Total Traceable Variables  : 21
+ Total Scalar Nets and Variables : 266
+
+ Total Simulation Time: 0.05 sec
+
+ Current Memory Usage: 334.713 Meg
+
+Fri Nov  8 23:24:17 2019
+

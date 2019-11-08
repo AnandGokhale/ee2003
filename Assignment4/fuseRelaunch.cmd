@@ -1,1 +1,0 @@
--intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "/home/anand/EE2003/Assignment4/IF_isim_beh.exe" -prj "/home/anand/EE2003/Assignment4/IF_beh.prj" "work.IF" "work.glbl" 

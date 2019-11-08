@@ -1,0 +1,1214 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.03 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.03 secs
+ 
+--> 
+Reading design: Pipelined_CPU.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Pipelined_CPU.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Pipelined_CPU"
+Output Format                      : NGC
+Target Device                      : xc3s500e-5-fg320
+
+---- Source Options
+Top Module Name                    : Pipelined_CPU
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "we_generator.v" in library work
+Compiling verilog file "reg_write_generator.v" in library work
+Module <we_generator> compiled
+Compiling verilog file "Decoder.v" in library work
+Module <reg_write_generator> compiled
+Compiling verilog file "ALU.v" in library work
+Module <Decoder> compiled
+Compiling verilog file "Stall_signal_generator.v" in library work
+Module <ALU> compiled
+Compiling verilog file "Register_file.v" in library work
+Module <Stall_signal_generator> compiled
+Compiling verilog file "MEM.v" in library work
+Module <Register_file> compiled
+Compiling verilog file "IF.v" in library work
+Module <MEM> compiled
+Compiling verilog file "ID.v" in library work
+Module <IF> compiled
+Compiling verilog file "generate_next_PC.v" in library work
+Module <ID> compiled
+Compiling verilog file "forward_signal_generator.v" in library work
+Module <generate_next_PC> compiled
+Compiling verilog file "EX.v" in library work
+Module <forward_signal_generator> compiled
+Compiling verilog file "Pipelined_CPU.v" in library work
+Module <EX> compiled
+Module <Pipelined_CPU> compiled
+No errors in compilation
+Analysis of file <"Pipelined_CPU.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <Pipelined_CPU> in library <work>.
+
+Analyzing hierarchy for module <IF> in library <work>.
+
+Analyzing hierarchy for module <Stall_signal_generator> in library <work>.
+
+Analyzing hierarchy for module <Register_file> in library <work>.
+
+Analyzing hierarchy for module <ID> in library <work>.
+
+Analyzing hierarchy for module <EX> in library <work>.
+
+Analyzing hierarchy for module <MEM> in library <work>.
+
+Analyzing hierarchy for module <forward_signal_generator> in library <work>.
+
+Analyzing hierarchy for module <generate_next_PC> in library <work>.
+
+Analyzing hierarchy for module <Decoder> in library <work>.
+
+Analyzing hierarchy for module <ALU> in library <work>.
+
+Analyzing hierarchy for module <we_generator> in library <work>.
+
+Analyzing hierarchy for module <reg_write_generator> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <Pipelined_CPU>.
+Module <Pipelined_CPU> is correct for synthesis.
+ 
+Analyzing module <IF> in library <work>.
+Module <IF> is correct for synthesis.
+ 
+Analyzing module <Stall_signal_generator> in library <work>.
+Module <Stall_signal_generator> is correct for synthesis.
+ 
+Analyzing module <Register_file> in library <work>.
+Module <Register_file> is correct for synthesis.
+ 
+Analyzing module <ID> in library <work>.
+Module <ID> is correct for synthesis.
+ 
+Analyzing module <Decoder> in library <work>.
+Module <Decoder> is correct for synthesis.
+ 
+Analyzing module <EX> in library <work>.
+Module <EX> is correct for synthesis.
+ 
+Analyzing module <ALU> in library <work>.
+Module <ALU> is correct for synthesis.
+ 
+Analyzing module <we_generator> in library <work>.
+Module <we_generator> is correct for synthesis.
+ 
+Analyzing module <MEM> in library <work>.
+Module <MEM> is correct for synthesis.
+ 
+Analyzing module <reg_write_generator> in library <work>.
+Module <reg_write_generator> is correct for synthesis.
+ 
+Analyzing module <forward_signal_generator> in library <work>.
+Module <forward_signal_generator> is correct for synthesis.
+ 
+Analyzing module <generate_next_PC> in library <work>.
+Module <generate_next_PC> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <IF>.
+    Related source file is "IF.v".
+    Found 32-bit register for signal <instr>.
+    Found 1-bit register for signal <valid_propogate<0>>.
+    Found 32-bit register for signal <pc_propogate>.
+    Summary:
+	inferred  65 D-type flip-flop(s).
+Unit <IF> synthesized.
+
+
+Synthesizing Unit <Stall_signal_generator>.
+    Related source file is "Stall_signal_generator.v".
+WARNING:Xst:647 - Input <instr1<31:12>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <instr1<2:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <instr2<31:25>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <instr2<14:7>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <instr2<1:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:737 - Found 1-bit latch for signal <stall>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 5-bit comparator equal for signal <stall$cmp_eq0007> created at line 33.
+    Found 5-bit comparator equal for signal <stall$cmp_eq0008> created at line 33.
+    Summary:
+	inferred   2 Comparator(s).
+Unit <Stall_signal_generator> synthesized.
+
+
+Synthesizing Unit <Register_file>.
+    Related source file is "Register_file.v".
+    Found 32x32-bit dual-port RAM <Mram_reg_file> for signal <reg_file>.
+    Found 32x32-bit dual-port RAM <Mram_reg_file_ren> for signal <reg_file>.
+    Summary:
+	inferred   2 RAM(s).
+Unit <Register_file> synthesized.
+
+
+Synthesizing Unit <forward_signal_generator>.
+    Related source file is "forward_signal_generator.v".
+WARNING:Xst:647 - Input <mem_instr1> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <instr2<31:7>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <instr2<2:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <id_validity<0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <ex_rs1> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <ex_rs2> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <ex_instr1> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <ex_instr2> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:737 - Found 32-bit latch for signal <fwd_num2>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <fwd_num1>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 32-bit latch for signal <fwd_rv2>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+    Found 5-bit comparator equal for signal <fwd_num1$cmp_eq0000> created at line 83.
+    Found 5-bit comparator equal for signal <fwd_num1$cmp_eq0001> created at line 89.
+    Found 5-bit comparator not equal for signal <fwd_num1$cmp_ne0000> created at line 83.
+    Found 32-bit 8-to-1 multiplexer for signal <fwd_rv2$mux0000>.
+    Found 5-bit comparator equal for signal <y$cmp_eq0000> created at line 58.
+    Found 5-bit comparator equal for signal <z$cmp_eq0000> created at line 59.
+    Summary:
+	inferred   5 Comparator(s).
+	inferred  32 Multiplexer(s).
+Unit <forward_signal_generator> synthesized.
+
+
+Synthesizing Unit <generate_next_PC>.
+    Related source file is "generate_next_PC.v".
+WARNING:Xst:647 - Input <instr<1:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <id_instr<31:7>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <id_instr<2:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 32-bit 4-to-1 multiplexer for signal <next_PC$mux0000>.
+    Found 32-bit adder for signal <next_PC$share0000>.
+    Found 32-bit adder for signal <old_next_PC_11$add0000> created at line 46.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  32 Multiplexer(s).
+Unit <generate_next_PC> synthesized.
+
+
+Synthesizing Unit <Decoder>.
+    Related source file is "Decoder.v".
+WARNING:Xst:737 - Found 32-bit latch for signal <imm>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+Unit <Decoder> synthesized.
+
+
+Synthesizing Unit <ALU>.
+    Related source file is "ALU.v".
+WARNING:Xst:737 - Found 32-bit latch for signal <out>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+    Found 32-bit comparator equal for signal <branch_0$cmp_eq0002> created at line 78.
+    Found 32-bit comparator greatequal for signal <branch_0$cmp_ge0000> created at line 93.
+    Found 32-bit comparator greatequal for signal <branch_0$cmp_ge0001> created at line 103.
+    Found 32-bit comparator less for signal <branch_0$cmp_lt0000> created at line 88.
+    Found 32-bit comparator less for signal <branch_0$cmp_lt0001> created at line 98.
+    Found 32-bit comparator not equal for signal <branch_0$cmp_ne0000> created at line 83.
+    Found 32-bit addsub for signal <out$share0000> created at line 32.
+    Found 32-bit shifter logical left for signal <out$shift0000> created at line 64.
+    Found 32-bit shifter logical right for signal <out$shift0001> created at line 67.
+    Found 32-bit shifter arithmetic right for signal <out$shift0002> created at line 70.
+    Found 32-bit xor2 for signal <out$xor0000> created at line 61.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   6 Comparator(s).
+	inferred   3 Combinational logic shifter(s).
+Unit <ALU> synthesized.
+
+
+Synthesizing Unit <we_generator>.
+    Related source file is "we_generator.v".
+WARNING:Xst:647 - Input <instr<31:15>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <instr<11:7>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+Unit <we_generator> synthesized.
+
+
+Synthesizing Unit <reg_write_generator>.
+    Related source file is "reg_write_generator.v".
+WARNING:Xst:647 - Input <instr<31:15>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <instr<11:7>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <instr<2:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+Unit <reg_write_generator> synthesized.
+
+
+Synthesizing Unit <ID>.
+    Related source file is "ID.v".
+    Found 32-bit register for signal <rv1>.
+    Found 32-bit register for signal <rv2>.
+    Found 32-bit register for signal <alu_in>.
+    Found 32-bit register for signal <instr_propogate>.
+    Found 1-bit register for signal <valid_propogate<0>>.
+    Found 5-bit register for signal <rd>.
+    Found 32-bit register for signal <pc_propogate>.
+    Found 5-bit register for signal <id_rs1>.
+    Found 5-bit register for signal <id_rs2>.
+    Found 32-bit register for signal <imm>.
+    Found 11-bit register for signal <alu_opcode>.
+    Found 7-bit register for signal <opcode>.
+    Summary:
+	inferred 226 D-type flip-flop(s).
+Unit <ID> synthesized.
+
+
+Synthesizing Unit <EX>.
+    Related source file is "EX.v".
+WARNING:Xst:647 - Input <opcode> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Register <daddr> equivalent to <alu_out> has been removed
+    Found 32-bit register for signal <instr_propogate>.
+    Found 1-bit register for signal <valid_propogate<0>>.
+    Found 32-bit register for signal <alu_out>.
+    Found 4-bit register for signal <we>.
+    Found 32-bit register for signal <pc_propogate>.
+    Found 5-bit register for signal <rd_propogate>.
+    Found 32-bit register for signal <dwdata>.
+    Found 5-bit register for signal <ex_rs1>.
+    Found 5-bit register for signal <ex_rs2>.
+    Found 32-bit adder for signal <$add0000> created at line 80.
+    Summary:
+	inferred 148 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <EX> synthesized.
+
+
+Synthesizing Unit <MEM>.
+    Related source file is "MEM.v".
+    Found 1-bit register for signal <mem_branch>.
+    Found 32-bit register for signal <instr_propogate>.
+    Found 1-bit register for signal <valid_propogate<0>>.
+    Found 32-bit register for signal <indata>.
+    Found 5-bit register for signal <rd_propogate>.
+    Found 1-bit register for signal <Reg_Write<0>>.
+    Summary:
+	inferred  72 D-type flip-flop(s).
+Unit <MEM> synthesized.
+
+
+Synthesizing Unit <Pipelined_CPU>.
+    Related source file is "Pipelined_CPU.v".
+WARNING:Xst:1780 - Signal <to_mem> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <str_fwd> is used but never assigned. This sourceless signal will be automatically connected to value 00.
+WARNING:Xst:1780 - Signal <rd> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <mem_Reg_Write<0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <indata> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <f_mem> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <f_ex> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <ex_pc> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <ex_offset> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 32-bit register for signal <pc>.
+    Summary:
+	inferred  32 D-type flip-flop(s).
+Unit <Pipelined_CPU> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 32x32-bit dual-port RAM                               : 2
+# Adders/Subtractors                                   : 4
+ 32-bit adder                                          : 3
+ 32-bit addsub                                         : 1
+# Registers                                            : 31
+ 1-bit register                                        : 6
+ 11-bit register                                       : 1
+ 32-bit register                                       : 15
+ 4-bit register                                        : 1
+ 5-bit register                                        : 7
+ 7-bit register                                        : 1
+# Latches                                              : 6
+ 1-bit latch                                           : 1
+ 32-bit latch                                          : 5
+# Comparators                                          : 13
+ 32-bit comparator equal                               : 1
+ 32-bit comparator greatequal                          : 2
+ 32-bit comparator less                                : 2
+ 32-bit comparator not equal                           : 1
+ 5-bit comparator equal                                : 6
+ 5-bit comparator not equal                            : 1
+# Multiplexers                                         : 2
+ 32-bit 4-to-1 multiplexer                             : 1
+ 32-bit 8-to-1 multiplexer                             : 1
+# Logic shifters                                       : 3
+ 32-bit shifter arithmetic right                       : 1
+ 32-bit shifter logical left                           : 1
+ 32-bit shifter logical right                          : 1
+# Xors                                                 : 1
+ 32-bit xor2                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:2677 - Node <instr_propogate_7> of sequential type is unconnected in block <id_ex>.
+WARNING:Xst:2677 - Node <instr_propogate_8> of sequential type is unconnected in block <id_ex>.
+WARNING:Xst:2677 - Node <instr_propogate_9> of sequential type is unconnected in block <id_ex>.
+WARNING:Xst:2677 - Node <instr_propogate_10> of sequential type is unconnected in block <id_ex>.
+WARNING:Xst:2677 - Node <instr_propogate_11> of sequential type is unconnected in block <id_ex>.
+WARNING:Xst:2677 - Node <instr_propogate_15> of sequential type is unconnected in block <id_ex>.
+WARNING:Xst:2677 - Node <instr_propogate_16> of sequential type is unconnected in block <id_ex>.
+WARNING:Xst:2677 - Node <instr_propogate_17> of sequential type is unconnected in block <id_ex>.
+WARNING:Xst:2677 - Node <instr_propogate_18> of sequential type is unconnected in block <id_ex>.
+WARNING:Xst:2677 - Node <instr_propogate_19> of sequential type is unconnected in block <id_ex>.
+WARNING:Xst:2677 - Node <instr_propogate_20> of sequential type is unconnected in block <id_ex>.
+WARNING:Xst:2677 - Node <instr_propogate_21> of sequential type is unconnected in block <id_ex>.
+WARNING:Xst:2677 - Node <instr_propogate_22> of sequential type is unconnected in block <id_ex>.
+WARNING:Xst:2677 - Node <instr_propogate_23> of sequential type is unconnected in block <id_ex>.
+WARNING:Xst:2677 - Node <instr_propogate_24> of sequential type is unconnected in block <id_ex>.
+WARNING:Xst:2677 - Node <instr_propogate_25> of sequential type is unconnected in block <id_ex>.
+WARNING:Xst:2677 - Node <instr_propogate_26> of sequential type is unconnected in block <id_ex>.
+WARNING:Xst:2677 - Node <instr_propogate_27> of sequential type is unconnected in block <id_ex>.
+WARNING:Xst:2677 - Node <instr_propogate_28> of sequential type is unconnected in block <id_ex>.
+WARNING:Xst:2677 - Node <instr_propogate_29> of sequential type is unconnected in block <id_ex>.
+WARNING:Xst:2677 - Node <instr_propogate_30> of sequential type is unconnected in block <id_ex>.
+WARNING:Xst:2677 - Node <instr_propogate_31> of sequential type is unconnected in block <id_ex>.
+WARNING:Xst:2677 - Node <instr_propogate_0> of sequential type is unconnected in block <ex_mem>.
+WARNING:Xst:2677 - Node <instr_propogate_1> of sequential type is unconnected in block <ex_mem>.
+WARNING:Xst:2677 - Node <instr_propogate_2> of sequential type is unconnected in block <ex_mem>.
+WARNING:Xst:2677 - Node <instr_propogate_7> of sequential type is unconnected in block <ex_mem>.
+WARNING:Xst:2677 - Node <instr_propogate_8> of sequential type is unconnected in block <ex_mem>.
+WARNING:Xst:2677 - Node <instr_propogate_9> of sequential type is unconnected in block <ex_mem>.
+WARNING:Xst:2677 - Node <instr_propogate_10> of sequential type is unconnected in block <ex_mem>.
+WARNING:Xst:2677 - Node <instr_propogate_11> of sequential type is unconnected in block <ex_mem>.
+WARNING:Xst:2677 - Node <instr_propogate_15> of sequential type is unconnected in block <ex_mem>.
+WARNING:Xst:2677 - Node <instr_propogate_16> of sequential type is unconnected in block <ex_mem>.
+WARNING:Xst:2677 - Node <instr_propogate_17> of sequential type is unconnected in block <ex_mem>.
+WARNING:Xst:2677 - Node <instr_propogate_18> of sequential type is unconnected in block <ex_mem>.
+WARNING:Xst:2677 - Node <instr_propogate_19> of sequential type is unconnected in block <ex_mem>.
+WARNING:Xst:2677 - Node <instr_propogate_20> of sequential type is unconnected in block <ex_mem>.
+WARNING:Xst:2677 - Node <instr_propogate_21> of sequential type is unconnected in block <ex_mem>.
+WARNING:Xst:2677 - Node <instr_propogate_22> of sequential type is unconnected in block <ex_mem>.
+WARNING:Xst:2677 - Node <instr_propogate_23> of sequential type is unconnected in block <ex_mem>.
+WARNING:Xst:2677 - Node <instr_propogate_24> of sequential type is unconnected in block <ex_mem>.
+WARNING:Xst:2677 - Node <instr_propogate_25> of sequential type is unconnected in block <ex_mem>.
+WARNING:Xst:2677 - Node <instr_propogate_26> of sequential type is unconnected in block <ex_mem>.
+WARNING:Xst:2677 - Node <instr_propogate_27> of sequential type is unconnected in block <ex_mem>.
+WARNING:Xst:2677 - Node <instr_propogate_28> of sequential type is unconnected in block <ex_mem>.
+WARNING:Xst:2677 - Node <instr_propogate_29> of sequential type is unconnected in block <ex_mem>.
+WARNING:Xst:2677 - Node <instr_propogate_30> of sequential type is unconnected in block <ex_mem>.
+WARNING:Xst:2677 - Node <instr_propogate_31> of sequential type is unconnected in block <ex_mem>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <0>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <1>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <2>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <3>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <4>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <5>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <6>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <7>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <8>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <9>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <10>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <11>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <12>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <13>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <14>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <15>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <16>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <17>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <18>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <19>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <20>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <21>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <22>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <23>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <24>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <25>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <26>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <27>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <28>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <29>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <30>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <31>.
+
+Synthesizing (advanced) Unit <Pipelined_CPU>.
+INFO:Xst:3226 - The RAM <reg_file/Mram_reg_file> will be implemented as a BLOCK RAM, absorbing the following register(s): <id_ex/rv1>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 32-word x 32-bit                    |          |
+    |     mode           | read-first                          |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <reg_file/_and0000> | high     |
+    |     addrA          | connected to signal <ex_rd>         |          |
+    |     diA            | connected to signal <reg_indata>    |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 32-word x 32-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <clk>           | rise     |
+    |     addrB          | connected to signal <rs1>           |          |
+    |     doB            | connected to signal <id_rv1>        |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <reg_file/Mram_reg_file_ren> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 32-word x 32-bit                    |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <reg_file/_and0000> | high     |
+    |     addrA          | connected to signal <ex_rd>         |          |
+    |     diA            | connected to signal <reg_indata>    |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 32-word x 32-bit                    |          |
+    |     addrB          | connected to signal <rs2>           |          |
+    |     doB            | connected to signal <rv2>           |          |
+    -----------------------------------------------------------------------
+Unit <Pipelined_CPU> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 32x32-bit dual-port block RAM                         : 1
+ 32x32-bit dual-port distributed RAM                   : 1
+# Adders/Subtractors                                   : 4
+ 32-bit adder                                          : 3
+ 32-bit addsub                                         : 1
+# Registers                                            : 471
+ Flip-Flops                                            : 471
+# Latches                                              : 6
+ 1-bit latch                                           : 1
+ 32-bit latch                                          : 5
+# Comparators                                          : 13
+ 32-bit comparator equal                               : 1
+ 32-bit comparator greatequal                          : 2
+ 32-bit comparator less                                : 2
+ 32-bit comparator not equal                           : 1
+ 5-bit comparator equal                                : 6
+ 5-bit comparator not equal                            : 1
+# Multiplexers                                         : 2
+ 32-bit 4-to-1 multiplexer                             : 1
+ 32-bit 8-to-1 multiplexer                             : 1
+# Logic shifters                                       : 3
+ 32-bit shifter arithmetic right                       : 1
+ 32-bit shifter logical left                           : 1
+ 32-bit shifter logical right                          : 1
+# Xors                                                 : 1
+ 32-bit xor2                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1294 - Latch <fwd_num1_0> is equivalent to a wire in block <forward_signal_generator>.
+WARNING:Xst:1294 - Latch <fwd_num1_1> is equivalent to a wire in block <forward_signal_generator>.
+WARNING:Xst:1294 - Latch <fwd_num1_2> is equivalent to a wire in block <forward_signal_generator>.
+WARNING:Xst:1294 - Latch <fwd_num1_3> is equivalent to a wire in block <forward_signal_generator>.
+WARNING:Xst:1294 - Latch <fwd_num1_4> is equivalent to a wire in block <forward_signal_generator>.
+WARNING:Xst:1294 - Latch <fwd_num1_5> is equivalent to a wire in block <forward_signal_generator>.
+WARNING:Xst:1294 - Latch <fwd_num1_6> is equivalent to a wire in block <forward_signal_generator>.
+WARNING:Xst:1294 - Latch <fwd_num1_7> is equivalent to a wire in block <forward_signal_generator>.
+WARNING:Xst:1294 - Latch <fwd_num1_8> is equivalent to a wire in block <forward_signal_generator>.
+WARNING:Xst:1294 - Latch <fwd_num1_9> is equivalent to a wire in block <forward_signal_generator>.
+WARNING:Xst:1294 - Latch <fwd_num1_10> is equivalent to a wire in block <forward_signal_generator>.
+WARNING:Xst:1294 - Latch <fwd_num1_11> is equivalent to a wire in block <forward_signal_generator>.
+WARNING:Xst:1294 - Latch <fwd_num1_12> is equivalent to a wire in block <forward_signal_generator>.
+WARNING:Xst:1294 - Latch <fwd_num1_13> is equivalent to a wire in block <forward_signal_generator>.
+WARNING:Xst:1294 - Latch <fwd_num1_14> is equivalent to a wire in block <forward_signal_generator>.
+WARNING:Xst:1294 - Latch <fwd_num1_15> is equivalent to a wire in block <forward_signal_generator>.
+WARNING:Xst:1294 - Latch <fwd_num1_16> is equivalent to a wire in block <forward_signal_generator>.
+WARNING:Xst:1294 - Latch <fwd_num1_17> is equivalent to a wire in block <forward_signal_generator>.
+WARNING:Xst:1294 - Latch <fwd_num1_18> is equivalent to a wire in block <forward_signal_generator>.
+WARNING:Xst:1294 - Latch <fwd_num1_19> is equivalent to a wire in block <forward_signal_generator>.
+WARNING:Xst:1294 - Latch <fwd_num1_20> is equivalent to a wire in block <forward_signal_generator>.
+WARNING:Xst:1294 - Latch <fwd_num1_21> is equivalent to a wire in block <forward_signal_generator>.
+WARNING:Xst:1294 - Latch <fwd_num1_22> is equivalent to a wire in block <forward_signal_generator>.
+WARNING:Xst:1294 - Latch <fwd_num1_23> is equivalent to a wire in block <forward_signal_generator>.
+WARNING:Xst:1294 - Latch <fwd_num1_24> is equivalent to a wire in block <forward_signal_generator>.
+WARNING:Xst:1294 - Latch <fwd_num1_25> is equivalent to a wire in block <forward_signal_generator>.
+WARNING:Xst:1294 - Latch <fwd_num1_26> is equivalent to a wire in block <forward_signal_generator>.
+WARNING:Xst:1294 - Latch <fwd_num1_27> is equivalent to a wire in block <forward_signal_generator>.
+WARNING:Xst:1294 - Latch <fwd_num1_28> is equivalent to a wire in block <forward_signal_generator>.
+WARNING:Xst:1294 - Latch <fwd_num1_29> is equivalent to a wire in block <forward_signal_generator>.
+WARNING:Xst:1294 - Latch <fwd_num1_30> is equivalent to a wire in block <forward_signal_generator>.
+WARNING:Xst:1294 - Latch <fwd_num1_31> is equivalent to a wire in block <forward_signal_generator>.
+
+Optimizing unit <Pipelined_CPU> ...
+
+Optimizing unit <IF> ...
+
+Optimizing unit <Stall_signal_generator> ...
+
+Optimizing unit <generate_next_PC> ...
+
+Optimizing unit <forward_signal_generator> ...
+
+Optimizing unit <Decoder> ...
+
+Optimizing unit <ALU> ...
+WARNING:Xst:2677 - Node <id_ex/instr_propogate_7> of sequential type is unconnected in block <Pipelined_CPU>.
+WARNING:Xst:2677 - Node <id_ex/instr_propogate_8> of sequential type is unconnected in block <Pipelined_CPU>.
+WARNING:Xst:2677 - Node <id_ex/instr_propogate_9> of sequential type is unconnected in block <Pipelined_CPU>.
+WARNING:Xst:2677 - Node <id_ex/instr_propogate_10> of sequential type is unconnected in block <Pipelined_CPU>.
+WARNING:Xst:2677 - Node <id_ex/instr_propogate_11> of sequential type is unconnected in block <Pipelined_CPU>.
+WARNING:Xst:2677 - Node <id_ex/instr_propogate_15> of sequential type is unconnected in block <Pipelined_CPU>.
+WARNING:Xst:2677 - Node <id_ex/instr_propogate_16> of sequential type is unconnected in block <Pipelined_CPU>.
+WARNING:Xst:2677 - Node <id_ex/instr_propogate_17> of sequential type is unconnected in block <Pipelined_CPU>.
+WARNING:Xst:2677 - Node <id_ex/instr_propogate_18> of sequential type is unconnected in block <Pipelined_CPU>.
+WARNING:Xst:2677 - Node <id_ex/instr_propogate_19> of sequential type is unconnected in block <Pipelined_CPU>.
+WARNING:Xst:2677 - Node <id_ex/instr_propogate_20> of sequential type is unconnected in block <Pipelined_CPU>.
+WARNING:Xst:2677 - Node <id_ex/instr_propogate_21> of sequential type is unconnected in block <Pipelined_CPU>.
+WARNING:Xst:2677 - Node <id_ex/instr_propogate_22> of sequential type is unconnected in block <Pipelined_CPU>.
+WARNING:Xst:2677 - Node <id_ex/instr_propogate_23> of sequential type is unconnected in block <Pipelined_CPU>.
+WARNING:Xst:2677 - Node <id_ex/instr_propogate_24> of sequential type is unconnected in block <Pipelined_CPU>.
+WARNING:Xst:2677 - Node <id_ex/instr_propogate_25> of sequential type is unconnected in block <Pipelined_CPU>.
+WARNING:Xst:2677 - Node <id_ex/instr_propogate_26> of sequential type is unconnected in block <Pipelined_CPU>.
+WARNING:Xst:2677 - Node <id_ex/instr_propogate_27> of sequential type is unconnected in block <Pipelined_CPU>.
+WARNING:Xst:2677 - Node <id_ex/instr_propogate_28> of sequential type is unconnected in block <Pipelined_CPU>.
+WARNING:Xst:2677 - Node <id_ex/instr_propogate_29> of sequential type is unconnected in block <Pipelined_CPU>.
+WARNING:Xst:2677 - Node <id_ex/instr_propogate_30> of sequential type is unconnected in block <Pipelined_CPU>.
+WARNING:Xst:2677 - Node <id_ex/instr_propogate_31> of sequential type is unconnected in block <Pipelined_CPU>.
+WARNING:Xst:2677 - Node <ex_mem/instr_propogate_0> of sequential type is unconnected in block <Pipelined_CPU>.
+WARNING:Xst:2677 - Node <ex_mem/instr_propogate_1> of sequential type is unconnected in block <Pipelined_CPU>.
+WARNING:Xst:2677 - Node <ex_mem/instr_propogate_2> of sequential type is unconnected in block <Pipelined_CPU>.
+WARNING:Xst:2677 - Node <ex_mem/instr_propogate_7> of sequential type is unconnected in block <Pipelined_CPU>.
+WARNING:Xst:2677 - Node <ex_mem/instr_propogate_8> of sequential type is unconnected in block <Pipelined_CPU>.
+WARNING:Xst:2677 - Node <ex_mem/instr_propogate_9> of sequential type is unconnected in block <Pipelined_CPU>.
+WARNING:Xst:2677 - Node <ex_mem/instr_propogate_10> of sequential type is unconnected in block <Pipelined_CPU>.
+WARNING:Xst:2677 - Node <ex_mem/instr_propogate_11> of sequential type is unconnected in block <Pipelined_CPU>.
+WARNING:Xst:2677 - Node <ex_mem/instr_propogate_15> of sequential type is unconnected in block <Pipelined_CPU>.
+WARNING:Xst:2677 - Node <ex_mem/instr_propogate_16> of sequential type is unconnected in block <Pipelined_CPU>.
+WARNING:Xst:2677 - Node <ex_mem/instr_propogate_17> of sequential type is unconnected in block <Pipelined_CPU>.
+WARNING:Xst:2677 - Node <ex_mem/instr_propogate_18> of sequential type is unconnected in block <Pipelined_CPU>.
+WARNING:Xst:2677 - Node <ex_mem/instr_propogate_19> of sequential type is unconnected in block <Pipelined_CPU>.
+WARNING:Xst:2677 - Node <ex_mem/instr_propogate_20> of sequential type is unconnected in block <Pipelined_CPU>.
+WARNING:Xst:2677 - Node <ex_mem/instr_propogate_21> of sequential type is unconnected in block <Pipelined_CPU>.
+WARNING:Xst:2677 - Node <ex_mem/instr_propogate_22> of sequential type is unconnected in block <Pipelined_CPU>.
+WARNING:Xst:2677 - Node <ex_mem/instr_propogate_23> of sequential type is unconnected in block <Pipelined_CPU>.
+WARNING:Xst:2677 - Node <ex_mem/instr_propogate_24> of sequential type is unconnected in block <Pipelined_CPU>.
+WARNING:Xst:2677 - Node <ex_mem/instr_propogate_25> of sequential type is unconnected in block <Pipelined_CPU>.
+WARNING:Xst:2677 - Node <ex_mem/instr_propogate_26> of sequential type is unconnected in block <Pipelined_CPU>.
+WARNING:Xst:2677 - Node <ex_mem/instr_propogate_27> of sequential type is unconnected in block <Pipelined_CPU>.
+WARNING:Xst:2677 - Node <ex_mem/instr_propogate_28> of sequential type is unconnected in block <Pipelined_CPU>.
+WARNING:Xst:2677 - Node <ex_mem/instr_propogate_29> of sequential type is unconnected in block <Pipelined_CPU>.
+WARNING:Xst:2677 - Node <ex_mem/instr_propogate_30> of sequential type is unconnected in block <Pipelined_CPU>.
+WARNING:Xst:2677 - Node <ex_mem/instr_propogate_31> of sequential type is unconnected in block <Pipelined_CPU>.
+WARNING:Xst:2677 - Node <mem_wb/instr_propogate_0> of sequential type is unconnected in block <Pipelined_CPU>.
+WARNING:Xst:2677 - Node <mem_wb/instr_propogate_1> of sequential type is unconnected in block <Pipelined_CPU>.
+WARNING:Xst:2677 - Node <mem_wb/instr_propogate_2> of sequential type is unconnected in block <Pipelined_CPU>.
+WARNING:Xst:2677 - Node <mem_wb/instr_propogate_3> of sequential type is unconnected in block <Pipelined_CPU>.
+WARNING:Xst:2677 - Node <mem_wb/instr_propogate_4> of sequential type is unconnected in block <Pipelined_CPU>.
+WARNING:Xst:2677 - Node <mem_wb/instr_propogate_5> of sequential type is unconnected in block <Pipelined_CPU>.
+WARNING:Xst:2677 - Node <mem_wb/instr_propogate_6> of sequential type is unconnected in block <Pipelined_CPU>.
+WARNING:Xst:2677 - Node <mem_wb/instr_propogate_7> of sequential type is unconnected in block <Pipelined_CPU>.
+WARNING:Xst:2677 - Node <mem_wb/instr_propogate_8> of sequential type is unconnected in block <Pipelined_CPU>.
+WARNING:Xst:2677 - Node <mem_wb/instr_propogate_9> of sequential type is unconnected in block <Pipelined_CPU>.
+WARNING:Xst:2677 - Node <mem_wb/instr_propogate_10> of sequential type is unconnected in block <Pipelined_CPU>.
+WARNING:Xst:2677 - Node <mem_wb/instr_propogate_11> of sequential type is unconnected in block <Pipelined_CPU>.
+WARNING:Xst:2677 - Node <mem_wb/instr_propogate_12> of sequential type is unconnected in block <Pipelined_CPU>.
+WARNING:Xst:2677 - Node <mem_wb/instr_propogate_13> of sequential type is unconnected in block <Pipelined_CPU>.
+WARNING:Xst:2677 - Node <mem_wb/instr_propogate_14> of sequential type is unconnected in block <Pipelined_CPU>.
+WARNING:Xst:2677 - Node <mem_wb/instr_propogate_15> of sequential type is unconnected in block <Pipelined_CPU>.
+WARNING:Xst:2677 - Node <mem_wb/instr_propogate_16> of sequential type is unconnected in block <Pipelined_CPU>.
+WARNING:Xst:2677 - Node <mem_wb/instr_propogate_17> of sequential type is unconnected in block <Pipelined_CPU>.
+WARNING:Xst:2677 - Node <mem_wb/instr_propogate_18> of sequential type is unconnected in block <Pipelined_CPU>.
+WARNING:Xst:2677 - Node <mem_wb/instr_propogate_19> of sequential type is unconnected in block <Pipelined_CPU>.
+WARNING:Xst:2677 - Node <mem_wb/instr_propogate_20> of sequential type is unconnected in block <Pipelined_CPU>.
+WARNING:Xst:2677 - Node <mem_wb/instr_propogate_21> of sequential type is unconnected in block <Pipelined_CPU>.
+WARNING:Xst:2677 - Node <mem_wb/instr_propogate_22> of sequential type is unconnected in block <Pipelined_CPU>.
+WARNING:Xst:2677 - Node <mem_wb/instr_propogate_23> of sequential type is unconnected in block <Pipelined_CPU>.
+WARNING:Xst:2677 - Node <mem_wb/instr_propogate_24> of sequential type is unconnected in block <Pipelined_CPU>.
+WARNING:Xst:2677 - Node <mem_wb/instr_propogate_25> of sequential type is unconnected in block <Pipelined_CPU>.
+WARNING:Xst:2677 - Node <mem_wb/instr_propogate_26> of sequential type is unconnected in block <Pipelined_CPU>.
+WARNING:Xst:2677 - Node <mem_wb/instr_propogate_27> of sequential type is unconnected in block <Pipelined_CPU>.
+WARNING:Xst:2677 - Node <mem_wb/instr_propogate_28> of sequential type is unconnected in block <Pipelined_CPU>.
+WARNING:Xst:2677 - Node <mem_wb/instr_propogate_29> of sequential type is unconnected in block <Pipelined_CPU>.
+WARNING:Xst:2677 - Node <mem_wb/instr_propogate_30> of sequential type is unconnected in block <Pipelined_CPU>.
+WARNING:Xst:2677 - Node <mem_wb/instr_propogate_31> of sequential type is unconnected in block <Pipelined_CPU>.
+WARNING:Xst:2677 - Node <ex_mem/ex_rs2_0> of sequential type is unconnected in block <Pipelined_CPU>.
+WARNING:Xst:2677 - Node <ex_mem/ex_rs2_1> of sequential type is unconnected in block <Pipelined_CPU>.
+WARNING:Xst:2677 - Node <ex_mem/ex_rs2_2> of sequential type is unconnected in block <Pipelined_CPU>.
+WARNING:Xst:2677 - Node <ex_mem/ex_rs2_3> of sequential type is unconnected in block <Pipelined_CPU>.
+WARNING:Xst:2677 - Node <ex_mem/ex_rs2_4> of sequential type is unconnected in block <Pipelined_CPU>.
+WARNING:Xst:2677 - Node <ex_mem/ex_rs1_0> of sequential type is unconnected in block <Pipelined_CPU>.
+WARNING:Xst:2677 - Node <ex_mem/ex_rs1_1> of sequential type is unconnected in block <Pipelined_CPU>.
+WARNING:Xst:2677 - Node <ex_mem/ex_rs1_2> of sequential type is unconnected in block <Pipelined_CPU>.
+WARNING:Xst:2677 - Node <ex_mem/ex_rs1_3> of sequential type is unconnected in block <Pipelined_CPU>.
+WARNING:Xst:2677 - Node <ex_mem/ex_rs1_4> of sequential type is unconnected in block <Pipelined_CPU>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+INFO:Xst:2261 - The FF/Latch <id_ex/instr_propogate_12> in Unit <Pipelined_CPU> is equivalent to the following FF/Latch, which will be removed : <id_ex/alu_opcode_7> 
+INFO:Xst:2261 - The FF/Latch <id_ex/instr_propogate_13> in Unit <Pipelined_CPU> is equivalent to the following FF/Latch, which will be removed : <id_ex/alu_opcode_8> 
+INFO:Xst:2261 - The FF/Latch <id_ex/instr_propogate_14> in Unit <Pipelined_CPU> is equivalent to the following FF/Latch, which will be removed : <id_ex/alu_opcode_9> 
+INFO:Xst:2261 - The FF/Latch <id_ex/instr_propogate_0> in Unit <Pipelined_CPU> is equivalent to the following FF/Latch, which will be removed : <id_ex/alu_opcode_0> 
+INFO:Xst:2261 - The FF/Latch <id_ex/instr_propogate_1> in Unit <Pipelined_CPU> is equivalent to the following FF/Latch, which will be removed : <id_ex/alu_opcode_1> 
+INFO:Xst:2261 - The FF/Latch <id_ex/instr_propogate_2> in Unit <Pipelined_CPU> is equivalent to the following FF/Latch, which will be removed : <id_ex/alu_opcode_2> 
+INFO:Xst:2261 - The FF/Latch <id_ex/instr_propogate_3> in Unit <Pipelined_CPU> is equivalent to the following FF/Latch, which will be removed : <id_ex/alu_opcode_3> 
+INFO:Xst:2261 - The FF/Latch <id_ex/instr_propogate_4> in Unit <Pipelined_CPU> is equivalent to the following FF/Latch, which will be removed : <id_ex/alu_opcode_4> 
+INFO:Xst:2261 - The FF/Latch <id_ex/instr_propogate_5> in Unit <Pipelined_CPU> is equivalent to the following FF/Latch, which will be removed : <id_ex/alu_opcode_5> 
+INFO:Xst:2261 - The FF/Latch <id_ex/instr_propogate_6> in Unit <Pipelined_CPU> is equivalent to the following FF/Latch, which will be removed : <id_ex/alu_opcode_6> 
+Found area constraint ratio of 100 (+ 5) on block Pipelined_CPU, actual ratio is 21.
+FlipFlop ex_mem/rd_propogate_0 has been replicated 1 time(s)
+FlipFlop ex_mem/rd_propogate_1 has been replicated 2 time(s)
+FlipFlop ex_mem/rd_propogate_2 has been replicated 1 time(s)
+FlipFlop ex_mem/rd_propogate_3 has been replicated 2 time(s)
+FlipFlop id_ex/instr_propogate_6 has been replicated 1 time(s)
+FlipFlop ex_mem/alu_out_31 has been replicated 2 time(s) to handle iob=true attribute.
+FlipFlop ex_mem/alu_out_30 has been replicated 2 time(s) to handle iob=true attribute.
+FlipFlop ex_mem/alu_out_29 has been replicated 2 time(s) to handle iob=true attribute.
+FlipFlop ex_mem/alu_out_28 has been replicated 2 time(s) to handle iob=true attribute.
+FlipFlop ex_mem/alu_out_27 has been replicated 2 time(s) to handle iob=true attribute.
+FlipFlop ex_mem/alu_out_26 has been replicated 2 time(s) to handle iob=true attribute.
+FlipFlop ex_mem/alu_out_25 has been replicated 2 time(s) to handle iob=true attribute.
+FlipFlop ex_mem/alu_out_24 has been replicated 2 time(s) to handle iob=true attribute.
+FlipFlop ex_mem/alu_out_23 has been replicated 2 time(s) to handle iob=true attribute.
+FlipFlop ex_mem/alu_out_22 has been replicated 2 time(s) to handle iob=true attribute.
+FlipFlop ex_mem/alu_out_21 has been replicated 2 time(s) to handle iob=true attribute.
+FlipFlop ex_mem/alu_out_20 has been replicated 2 time(s) to handle iob=true attribute.
+FlipFlop ex_mem/alu_out_19 has been replicated 2 time(s) to handle iob=true attribute.
+FlipFlop ex_mem/alu_out_18 has been replicated 2 time(s) to handle iob=true attribute.
+FlipFlop ex_mem/alu_out_17 has been replicated 2 time(s) to handle iob=true attribute.
+FlipFlop ex_mem/alu_out_16 has been replicated 2 time(s) to handle iob=true attribute.
+FlipFlop ex_mem/alu_out_15 has been replicated 2 time(s) to handle iob=true attribute.
+FlipFlop ex_mem/alu_out_14 has been replicated 2 time(s) to handle iob=true attribute.
+FlipFlop ex_mem/alu_out_13 has been replicated 2 time(s) to handle iob=true attribute.
+FlipFlop ex_mem/alu_out_12 has been replicated 2 time(s) to handle iob=true attribute.
+FlipFlop ex_mem/alu_out_11 has been replicated 2 time(s) to handle iob=true attribute.
+FlipFlop ex_mem/alu_out_10 has been replicated 2 time(s) to handle iob=true attribute.
+FlipFlop ex_mem/alu_out_9 has been replicated 2 time(s) to handle iob=true attribute.
+FlipFlop ex_mem/alu_out_8 has been replicated 2 time(s) to handle iob=true attribute.
+FlipFlop ex_mem/alu_out_7 has been replicated 2 time(s) to handle iob=true attribute.
+FlipFlop ex_mem/alu_out_6 has been replicated 2 time(s) to handle iob=true attribute.
+FlipFlop ex_mem/alu_out_5 has been replicated 2 time(s) to handle iob=true attribute.
+FlipFlop ex_mem/alu_out_4 has been replicated 2 time(s) to handle iob=true attribute.
+FlipFlop ex_mem/alu_out_3 has been replicated 2 time(s) to handle iob=true attribute.
+FlipFlop ex_mem/alu_out_2 has been replicated 2 time(s) to handle iob=true attribute.
+FlipFlop ex_mem/alu_out_1 has been replicated 2 time(s) to handle iob=true attribute.
+FlipFlop ex_mem/alu_out_0 has been replicated 2 time(s) to handle iob=true attribute.
+
+Final Macro Processing ...
+
+Processing Unit <Pipelined_CPU> :
+	Found 2-bit shift register for signal <id_ex/pc_propogate_0>.
+	Found 2-bit shift register for signal <id_ex/pc_propogate_1>.
+	Found 2-bit shift register for signal <id_ex/pc_propogate_2>.
+	Found 2-bit shift register for signal <id_ex/pc_propogate_3>.
+	Found 2-bit shift register for signal <id_ex/pc_propogate_4>.
+	Found 2-bit shift register for signal <id_ex/pc_propogate_5>.
+	Found 2-bit shift register for signal <id_ex/pc_propogate_6>.
+	Found 2-bit shift register for signal <id_ex/pc_propogate_7>.
+	Found 2-bit shift register for signal <id_ex/pc_propogate_8>.
+	Found 2-bit shift register for signal <id_ex/pc_propogate_9>.
+	Found 2-bit shift register for signal <id_ex/pc_propogate_10>.
+	Found 2-bit shift register for signal <id_ex/pc_propogate_11>.
+	Found 2-bit shift register for signal <id_ex/pc_propogate_12>.
+	Found 2-bit shift register for signal <id_ex/pc_propogate_13>.
+	Found 2-bit shift register for signal <id_ex/pc_propogate_14>.
+	Found 2-bit shift register for signal <id_ex/pc_propogate_15>.
+	Found 2-bit shift register for signal <id_ex/pc_propogate_16>.
+	Found 2-bit shift register for signal <id_ex/pc_propogate_17>.
+	Found 2-bit shift register for signal <id_ex/pc_propogate_18>.
+	Found 2-bit shift register for signal <id_ex/pc_propogate_19>.
+	Found 2-bit shift register for signal <id_ex/pc_propogate_20>.
+	Found 2-bit shift register for signal <id_ex/pc_propogate_21>.
+	Found 2-bit shift register for signal <id_ex/pc_propogate_22>.
+	Found 2-bit shift register for signal <id_ex/pc_propogate_23>.
+	Found 2-bit shift register for signal <id_ex/pc_propogate_24>.
+	Found 2-bit shift register for signal <id_ex/pc_propogate_25>.
+	Found 2-bit shift register for signal <id_ex/pc_propogate_26>.
+	Found 2-bit shift register for signal <id_ex/pc_propogate_27>.
+	Found 2-bit shift register for signal <id_ex/pc_propogate_28>.
+	Found 2-bit shift register for signal <id_ex/pc_propogate_29>.
+	Found 2-bit shift register for signal <id_ex/pc_propogate_30>.
+	Found 2-bit shift register for signal <id_ex/pc_propogate_31>.
+Unit <Pipelined_CPU> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 379
+ Flip-Flops                                            : 379
+# Shift Registers                                      : 32
+ 2-bit shift register                                  : 32
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : Pipelined_CPU.ngr
+Top Level Output File Name         : Pipelined_CPU
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 326
+
+Cell Usage :
+# BELS                             : 2108
+#      GND                         : 1
+#      INV                         : 1
+#      LUT1                        : 29
+#      LUT2                        : 196
+#      LUT2_D                      : 4
+#      LUT2_L                      : 1
+#      LUT3                        : 364
+#      LUT3_D                      : 2
+#      LUT4                        : 886
+#      LUT4_D                      : 9
+#      LUT4_L                      : 53
+#      MULT_AND                    : 17
+#      MUXCY                       : 201
+#      MUXF5                       : 219
+#      VCC                         : 1
+#      XORCY                       : 124
+# FlipFlops/Latches                : 540
+#      FD                          : 373
+#      FDR                         : 6
+#      FDRE                        : 32
+#      LD                          : 96
+#      LD_1                        : 1
+#      LDCPE                       : 32
+# RAMS                             : 65
+#      RAM16X1D                    : 64
+#      RAMB16_S36_S36              : 1
+# Shift Registers                  : 32
+#      SRL16                       : 32
+# Clock Buffers                    : 5
+#      BUFG                        : 4
+#      BUFGP                       : 1
+# IO Buffers                       : 325
+#      IBUF                        : 65
+#      OBUF                        : 260
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-5 
+
+ Number of Slices:                      888  out of   4656    19%  
+ Number of Slice Flip Flops:            468  out of   9312     5%  
+ Number of 4 input LUTs:               1705  out of   9312    18%  
+    Number used as logic:              1545
+    Number used as Shift registers:      32
+    Number used as RAMs:                128
+ Number of IOs:                         326
+ Number of bonded IOBs:                 326  out of    232   140% (*) 
+    IOB Flip Flops:                      72
+ Number of BRAMs:                         1  out of     20     5%  
+ Number of GCLKs:                         5  out of     24    20%  
+
+WARNING:Xst:1336 -  (*) More than 100% of Device resources are used
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+--------------------------------------------------------+-----------------------------+-------+
+Clock Signal                                            | Clock buffer(FF name)       | Load  |
+--------------------------------------------------------+-----------------------------+-------+
+clk                                                     | BUFGP                       | 508   |
+stall_gen/stall_not0001(stall_gen/stall_not00011:O)     | NONE(*)(stall_gen/stall)    | 1     |
+fwd_gen/fwd_num2_and00011(fwd_gen/fwd_num2_and00011:O)  | BUFG(*)(fwd_gen/fwd_num2_31)| 32    |
+fwd_gen/fwd_rv2_not00011(fwd_gen/fwd_rv2_not000125_f5:O)| BUFG(*)(fwd_gen/fwd_rv2_31) | 32    |
+id_ex/d1/imm_not00011(id_ex/d1/imm_not000118:O)         | BUFG(*)(id_ex/d1/imm_31)    | 32    |
+ex_mem/a1/out_not00011(ex_mem/a1/out_not0001:O)         | BUFG(*)(ex_mem/a1/out_31)   | 32    |
+--------------------------------------------------------+-----------------------------+-------+
+(*) These 5 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-------------------------------------------------------------+--------------------------+-------+
+Control Signal                                               | Buffer(FF name)          | Load  |
+-------------------------------------------------------------+--------------------------+-------+
+fwd_gen/fwd_num2_0__and0000(fwd_gen/fwd_num2_0__and00001:O)  | NONE(fwd_gen/fwd_num2_0) | 1     |
+fwd_gen/fwd_num2_0__and0001(fwd_gen/fwd_num2_0__and00011:O)  | NONE(fwd_gen/fwd_num2_0) | 1     |
+fwd_gen/fwd_num2_10__and0000(fwd_gen/fwd_num2_10__and00001:O)| NONE(fwd_gen/fwd_num2_10)| 1     |
+fwd_gen/fwd_num2_10__and0001(fwd_gen/fwd_num2_10__and00011:O)| NONE(fwd_gen/fwd_num2_10)| 1     |
+fwd_gen/fwd_num2_11__and0000(fwd_gen/fwd_num2_11__and00001:O)| NONE(fwd_gen/fwd_num2_11)| 1     |
+fwd_gen/fwd_num2_11__and0001(fwd_gen/fwd_num2_11__and00011:O)| NONE(fwd_gen/fwd_num2_11)| 1     |
+fwd_gen/fwd_num2_12__and0000(fwd_gen/fwd_num2_12__and00001:O)| NONE(fwd_gen/fwd_num2_12)| 1     |
+fwd_gen/fwd_num2_12__and0001(fwd_gen/fwd_num2_12__and00011:O)| NONE(fwd_gen/fwd_num2_12)| 1     |
+fwd_gen/fwd_num2_13__and0000(fwd_gen/fwd_num2_13__and00001:O)| NONE(fwd_gen/fwd_num2_13)| 1     |
+fwd_gen/fwd_num2_13__and0001(fwd_gen/fwd_num2_13__and00011:O)| NONE(fwd_gen/fwd_num2_13)| 1     |
+fwd_gen/fwd_num2_14__and0000(fwd_gen/fwd_num2_14__and00001:O)| NONE(fwd_gen/fwd_num2_14)| 1     |
+fwd_gen/fwd_num2_14__and0001(fwd_gen/fwd_num2_14__and00011:O)| NONE(fwd_gen/fwd_num2_14)| 1     |
+fwd_gen/fwd_num2_15__and0000(fwd_gen/fwd_num2_15__and00001:O)| NONE(fwd_gen/fwd_num2_15)| 1     |
+fwd_gen/fwd_num2_15__and0001(fwd_gen/fwd_num2_15__and00011:O)| NONE(fwd_gen/fwd_num2_15)| 1     |
+fwd_gen/fwd_num2_16__and0000(fwd_gen/fwd_num2_16__and00001:O)| NONE(fwd_gen/fwd_num2_16)| 1     |
+fwd_gen/fwd_num2_16__and0001(fwd_gen/fwd_num2_16__and00011:O)| NONE(fwd_gen/fwd_num2_16)| 1     |
+fwd_gen/fwd_num2_17__and0000(fwd_gen/fwd_num2_17__and00001:O)| NONE(fwd_gen/fwd_num2_17)| 1     |
+fwd_gen/fwd_num2_17__and0001(fwd_gen/fwd_num2_17__and00011:O)| NONE(fwd_gen/fwd_num2_17)| 1     |
+fwd_gen/fwd_num2_18__and0000(fwd_gen/fwd_num2_18__and00001:O)| NONE(fwd_gen/fwd_num2_18)| 1     |
+fwd_gen/fwd_num2_18__and0001(fwd_gen/fwd_num2_18__and00011:O)| NONE(fwd_gen/fwd_num2_18)| 1     |
+fwd_gen/fwd_num2_19__and0000(fwd_gen/fwd_num2_19__and00001:O)| NONE(fwd_gen/fwd_num2_19)| 1     |
+fwd_gen/fwd_num2_19__and0001(fwd_gen/fwd_num2_19__and00011:O)| NONE(fwd_gen/fwd_num2_19)| 1     |
+fwd_gen/fwd_num2_1__and0000(fwd_gen/fwd_num2_1__and00001:O)  | NONE(fwd_gen/fwd_num2_1) | 1     |
+fwd_gen/fwd_num2_1__and0001(fwd_gen/fwd_num2_1__and00011:O)  | NONE(fwd_gen/fwd_num2_1) | 1     |
+fwd_gen/fwd_num2_20__and0000(fwd_gen/fwd_num2_20__and00001:O)| NONE(fwd_gen/fwd_num2_20)| 1     |
+fwd_gen/fwd_num2_20__and0001(fwd_gen/fwd_num2_20__and00011:O)| NONE(fwd_gen/fwd_num2_20)| 1     |
+fwd_gen/fwd_num2_21__and0000(fwd_gen/fwd_num2_21__and00001:O)| NONE(fwd_gen/fwd_num2_21)| 1     |
+fwd_gen/fwd_num2_21__and0001(fwd_gen/fwd_num2_21__and00011:O)| NONE(fwd_gen/fwd_num2_21)| 1     |
+fwd_gen/fwd_num2_22__and0000(fwd_gen/fwd_num2_22__and00001:O)| NONE(fwd_gen/fwd_num2_22)| 1     |
+fwd_gen/fwd_num2_22__and0001(fwd_gen/fwd_num2_22__and00011:O)| NONE(fwd_gen/fwd_num2_22)| 1     |
+fwd_gen/fwd_num2_23__and0000(fwd_gen/fwd_num2_23__and00001:O)| NONE(fwd_gen/fwd_num2_23)| 1     |
+fwd_gen/fwd_num2_23__and0001(fwd_gen/fwd_num2_23__and00011:O)| NONE(fwd_gen/fwd_num2_23)| 1     |
+fwd_gen/fwd_num2_24__and0000(fwd_gen/fwd_num2_24__and00001:O)| NONE(fwd_gen/fwd_num2_24)| 1     |
+fwd_gen/fwd_num2_24__and0001(fwd_gen/fwd_num2_24__and00011:O)| NONE(fwd_gen/fwd_num2_24)| 1     |
+fwd_gen/fwd_num2_25__and0000(fwd_gen/fwd_num2_25__and00001:O)| NONE(fwd_gen/fwd_num2_25)| 1     |
+fwd_gen/fwd_num2_25__and0001(fwd_gen/fwd_num2_25__and00011:O)| NONE(fwd_gen/fwd_num2_25)| 1     |
+fwd_gen/fwd_num2_26__and0000(fwd_gen/fwd_num2_26__and00001:O)| NONE(fwd_gen/fwd_num2_26)| 1     |
+fwd_gen/fwd_num2_26__and0001(fwd_gen/fwd_num2_26__and00011:O)| NONE(fwd_gen/fwd_num2_26)| 1     |
+fwd_gen/fwd_num2_27__and0000(fwd_gen/fwd_num2_27__and00001:O)| NONE(fwd_gen/fwd_num2_27)| 1     |
+fwd_gen/fwd_num2_27__and0001(fwd_gen/fwd_num2_27__and00011:O)| NONE(fwd_gen/fwd_num2_27)| 1     |
+fwd_gen/fwd_num2_28__and0000(fwd_gen/fwd_num2_28__and00001:O)| NONE(fwd_gen/fwd_num2_28)| 1     |
+fwd_gen/fwd_num2_28__and0001(fwd_gen/fwd_num2_28__and00011:O)| NONE(fwd_gen/fwd_num2_28)| 1     |
+fwd_gen/fwd_num2_29__and0000(fwd_gen/fwd_num2_29__and00001:O)| NONE(fwd_gen/fwd_num2_29)| 1     |
+fwd_gen/fwd_num2_29__and0001(fwd_gen/fwd_num2_29__and00011:O)| NONE(fwd_gen/fwd_num2_29)| 1     |
+fwd_gen/fwd_num2_2__and0000(fwd_gen/fwd_num2_2__and00001:O)  | NONE(fwd_gen/fwd_num2_2) | 1     |
+fwd_gen/fwd_num2_2__and0001(fwd_gen/fwd_num2_2__and00011:O)  | NONE(fwd_gen/fwd_num2_2) | 1     |
+fwd_gen/fwd_num2_30__and0000(fwd_gen/fwd_num2_30__and00001:O)| NONE(fwd_gen/fwd_num2_30)| 1     |
+fwd_gen/fwd_num2_30__and0001(fwd_gen/fwd_num2_30__and00011:O)| NONE(fwd_gen/fwd_num2_30)| 1     |
+fwd_gen/fwd_num2_31__and0000(fwd_gen/fwd_num2_31__and00001:O)| NONE(fwd_gen/fwd_num2_31)| 1     |
+fwd_gen/fwd_num2_31__and0001(fwd_gen/fwd_num2_31__and00011:O)| NONE(fwd_gen/fwd_num2_31)| 1     |
+fwd_gen/fwd_num2_3__and0000(fwd_gen/fwd_num2_3__and00001:O)  | NONE(fwd_gen/fwd_num2_3) | 1     |
+fwd_gen/fwd_num2_3__and0001(fwd_gen/fwd_num2_3__and00011:O)  | NONE(fwd_gen/fwd_num2_3) | 1     |
+fwd_gen/fwd_num2_4__and0000(fwd_gen/fwd_num2_4__and00001:O)  | NONE(fwd_gen/fwd_num2_4) | 1     |
+fwd_gen/fwd_num2_4__and0001(fwd_gen/fwd_num2_4__and00011:O)  | NONE(fwd_gen/fwd_num2_4) | 1     |
+fwd_gen/fwd_num2_5__and0000(fwd_gen/fwd_num2_5__and00001:O)  | NONE(fwd_gen/fwd_num2_5) | 1     |
+fwd_gen/fwd_num2_5__and0001(fwd_gen/fwd_num2_5__and00011:O)  | NONE(fwd_gen/fwd_num2_5) | 1     |
+fwd_gen/fwd_num2_6__and0000(fwd_gen/fwd_num2_6__and00001:O)  | NONE(fwd_gen/fwd_num2_6) | 1     |
+fwd_gen/fwd_num2_6__and0001(fwd_gen/fwd_num2_6__and00011:O)  | NONE(fwd_gen/fwd_num2_6) | 1     |
+fwd_gen/fwd_num2_7__and0000(fwd_gen/fwd_num2_7__and00001:O)  | NONE(fwd_gen/fwd_num2_7) | 1     |
+fwd_gen/fwd_num2_7__and0001(fwd_gen/fwd_num2_7__and00011:O)  | NONE(fwd_gen/fwd_num2_7) | 1     |
+fwd_gen/fwd_num2_8__and0000(fwd_gen/fwd_num2_8__and00001:O)  | NONE(fwd_gen/fwd_num2_8) | 1     |
+fwd_gen/fwd_num2_8__and0001(fwd_gen/fwd_num2_8__and00011:O)  | NONE(fwd_gen/fwd_num2_8) | 1     |
+fwd_gen/fwd_num2_9__and0000(fwd_gen/fwd_num2_9__and00001:O)  | NONE(fwd_gen/fwd_num2_9) | 1     |
+fwd_gen/fwd_num2_9__and0001(fwd_gen/fwd_num2_9__and00011:O)  | NONE(fwd_gen/fwd_num2_9) | 1     |
+-------------------------------------------------------------+--------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 12.546ns (Maximum Frequency: 79.708MHz)
+   Minimum input arrival time before clock: 10.443ns
+   Maximum output required time after clock: 5.808ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 12.546ns (frequency: 79.708MHz)
+  Total number of paths / destination ports: 128756 / 995
+-------------------------------------------------------------------------
+Delay:               12.546ns (Levels of Logic = 39)
+  Source:            id_ex/id_rs2_1 (FF)
+  Destination:       mem_wb/mem_branch (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: id_ex/id_rs2_1 to mem_wb/mem_branch
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.514   0.532  id_ex/id_rs2_1 (id_ex/id_rs2_1)
+     LUT4:I0->O            1   0.612   0.360  fwd_gen/fwd_num1_cmp_eq0001526 (fwd_gen/fwd_num1_cmp_eq0001526)
+     LUT4:I3->O            4   0.612   0.568  fwd_gen/fwd_num1_cmp_eq0001578 (fwd_gen/fwd_num1_cmp_eq0001)
+     LUT3:I1->O            1   0.612   0.360  fwd_gen/fwd_rv2_and00001_1 (fwd_gen/fwd_rv2_and00001)
+     LUT4_D:I3->O         34   0.612   1.076  fwd_gen/fwd_num1_mux0000<0>11 (fwd_gen/N01)
+     LUT4:I3->O           13   0.612   0.905  fwd_gen/fwd_num1_mux0000<1>40 (fwd_num1<1>)
+     LUT2:I1->O            1   0.612   0.000  ex_mem/a1/Mcompar_branch_0_cmp_lt0001_lut<1> (ex_mem/a1/Mcompar_branch_0_cmp_lt0001_lut<1>)
+     MUXCY:S->O            1   0.404   0.000  ex_mem/a1/Mcompar_branch_0_cmp_lt0001_cy<1> (ex_mem/a1/Mcompar_branch_0_cmp_lt0001_cy<1>)
+     MUXCY:CI->O           1   0.051   0.000  ex_mem/a1/Mcompar_branch_0_cmp_lt0001_cy<2> (ex_mem/a1/Mcompar_branch_0_cmp_lt0001_cy<2>)
+     MUXCY:CI->O           1   0.051   0.000  ex_mem/a1/Mcompar_branch_0_cmp_lt0001_cy<3> (ex_mem/a1/Mcompar_branch_0_cmp_lt0001_cy<3>)
+     MUXCY:CI->O           1   0.051   0.000  ex_mem/a1/Mcompar_branch_0_cmp_lt0001_cy<4> (ex_mem/a1/Mcompar_branch_0_cmp_lt0001_cy<4>)
+     MUXCY:CI->O           1   0.052   0.000  ex_mem/a1/Mcompar_branch_0_cmp_lt0001_cy<5> (ex_mem/a1/Mcompar_branch_0_cmp_lt0001_cy<5>)
+     MUXCY:CI->O           1   0.052   0.000  ex_mem/a1/Mcompar_branch_0_cmp_lt0001_cy<6> (ex_mem/a1/Mcompar_branch_0_cmp_lt0001_cy<6>)
+     MUXCY:CI->O           1   0.052   0.000  ex_mem/a1/Mcompar_branch_0_cmp_lt0001_cy<7> (ex_mem/a1/Mcompar_branch_0_cmp_lt0001_cy<7>)
+     MUXCY:CI->O           1   0.052   0.000  ex_mem/a1/Mcompar_branch_0_cmp_lt0001_cy<8> (ex_mem/a1/Mcompar_branch_0_cmp_lt0001_cy<8>)
+     MUXCY:CI->O           1   0.052   0.000  ex_mem/a1/Mcompar_branch_0_cmp_lt0001_cy<9> (ex_mem/a1/Mcompar_branch_0_cmp_lt0001_cy<9>)
+     MUXCY:CI->O           1   0.052   0.000  ex_mem/a1/Mcompar_branch_0_cmp_lt0001_cy<10> (ex_mem/a1/Mcompar_branch_0_cmp_lt0001_cy<10>)
+     MUXCY:CI->O           1   0.052   0.000  ex_mem/a1/Mcompar_branch_0_cmp_lt0001_cy<11> (ex_mem/a1/Mcompar_branch_0_cmp_lt0001_cy<11>)
+     MUXCY:CI->O           1   0.052   0.000  ex_mem/a1/Mcompar_branch_0_cmp_lt0001_cy<12> (ex_mem/a1/Mcompar_branch_0_cmp_lt0001_cy<12>)
+     MUXCY:CI->O           1   0.052   0.000  ex_mem/a1/Mcompar_branch_0_cmp_lt0001_cy<13> (ex_mem/a1/Mcompar_branch_0_cmp_lt0001_cy<13>)
+     MUXCY:CI->O           1   0.052   0.000  ex_mem/a1/Mcompar_branch_0_cmp_lt0001_cy<14> (ex_mem/a1/Mcompar_branch_0_cmp_lt0001_cy<14>)
+     MUXCY:CI->O           1   0.052   0.000  ex_mem/a1/Mcompar_branch_0_cmp_lt0001_cy<15> (ex_mem/a1/Mcompar_branch_0_cmp_lt0001_cy<15>)
+     MUXCY:CI->O           1   0.052   0.000  ex_mem/a1/Mcompar_branch_0_cmp_lt0001_cy<16> (ex_mem/a1/Mcompar_branch_0_cmp_lt0001_cy<16>)
+     MUXCY:CI->O           1   0.052   0.000  ex_mem/a1/Mcompar_branch_0_cmp_lt0001_cy<17> (ex_mem/a1/Mcompar_branch_0_cmp_lt0001_cy<17>)
+     MUXCY:CI->O           1   0.052   0.000  ex_mem/a1/Mcompar_branch_0_cmp_lt0001_cy<18> (ex_mem/a1/Mcompar_branch_0_cmp_lt0001_cy<18>)
+     MUXCY:CI->O           1   0.052   0.000  ex_mem/a1/Mcompar_branch_0_cmp_lt0001_cy<19> (ex_mem/a1/Mcompar_branch_0_cmp_lt0001_cy<19>)
+     MUXCY:CI->O           1   0.052   0.000  ex_mem/a1/Mcompar_branch_0_cmp_lt0001_cy<20> (ex_mem/a1/Mcompar_branch_0_cmp_lt0001_cy<20>)
+     MUXCY:CI->O           1   0.052   0.000  ex_mem/a1/Mcompar_branch_0_cmp_lt0001_cy<21> (ex_mem/a1/Mcompar_branch_0_cmp_lt0001_cy<21>)
+     MUXCY:CI->O           1   0.052   0.000  ex_mem/a1/Mcompar_branch_0_cmp_lt0001_cy<22> (ex_mem/a1/Mcompar_branch_0_cmp_lt0001_cy<22>)
+     MUXCY:CI->O           1   0.052   0.000  ex_mem/a1/Mcompar_branch_0_cmp_lt0001_cy<23> (ex_mem/a1/Mcompar_branch_0_cmp_lt0001_cy<23>)
+     MUXCY:CI->O           1   0.052   0.000  ex_mem/a1/Mcompar_branch_0_cmp_lt0001_cy<24> (ex_mem/a1/Mcompar_branch_0_cmp_lt0001_cy<24>)
+     MUXCY:CI->O           1   0.052   0.000  ex_mem/a1/Mcompar_branch_0_cmp_lt0001_cy<25> (ex_mem/a1/Mcompar_branch_0_cmp_lt0001_cy<25>)
+     MUXCY:CI->O           1   0.052   0.000  ex_mem/a1/Mcompar_branch_0_cmp_lt0001_cy<26> (ex_mem/a1/Mcompar_branch_0_cmp_lt0001_cy<26>)
+     MUXCY:CI->O           1   0.052   0.000  ex_mem/a1/Mcompar_branch_0_cmp_lt0001_cy<27> (ex_mem/a1/Mcompar_branch_0_cmp_lt0001_cy<27>)
+     MUXCY:CI->O           1   0.052   0.000  ex_mem/a1/Mcompar_branch_0_cmp_lt0001_cy<28> (ex_mem/a1/Mcompar_branch_0_cmp_lt0001_cy<28>)
+     MUXCY:CI->O           1   0.052   0.000  ex_mem/a1/Mcompar_branch_0_cmp_lt0001_cy<29> (ex_mem/a1/Mcompar_branch_0_cmp_lt0001_cy<29>)
+     MUXCY:CI->O           1   0.052   0.000  ex_mem/a1/Mcompar_branch_0_cmp_lt0001_cy<30> (ex_mem/a1/Mcompar_branch_0_cmp_lt0001_cy<30>)
+     MUXCY:CI->O           2   0.399   0.410  ex_mem/a1/Mcompar_branch_0_cmp_lt0001_cy<31> (ex_mem/a1/Mcompar_branch_0_cmp_lt0001_cy<31>)
+     LUT3:I2->O            1   0.612   0.360  ex_mem/a1/branch_0_mux000078_SW0 (N227)
+     LUT4:I3->O            1   0.612   0.000  ex_mem/a1/branch_0_mux0000104 (ex_branch)
+     FD:D                      0.268          mem_wb/mem_branch
+    ----------------------------------------
+    Total                     12.546ns (7.975ns logic, 4.571ns route)
+                                       (63.6% logic, 36.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 7110 / 223
+-------------------------------------------------------------------------
+Offset:              10.443ns (Levels of Logic = 38)
+  Source:            idata<6> (PAD)
+  Destination:       pc_31 (FF)
+  Destination Clock: clk rising
+
+  Data Path: idata<6> to pc_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             3   1.106   0.603  idata_6_IBUF (idata_6_IBUF)
+     LUT3:I0->O            3   0.612   0.481  nexPC/next_PC_cmp_eq000011 (nexPC/next_PC_and0001)
+     LUT3:I2->O           13   0.612   0.866  nexPC/next_PC_cmp_eq00001 (nexPC/next_PC_cmp_eq0000)
+     LUT4:I2->O            1   0.612   0.360  nexPC/Mmux_next_PC_mux0000371 (nexPC/next_PC_mux0000<30>)
+     LUT4:I3->O            1   0.612   0.000  nexPC/Madd_next_PC_share0000_lut<1> (nexPC/Madd_next_PC_share0000_lut<1>)
+     MUXCY:S->O            1   0.404   0.000  nexPC/Madd_next_PC_share0000_cy<1> (nexPC/Madd_next_PC_share0000_cy<1>)
+     MUXCY:CI->O           1   0.051   0.000  nexPC/Madd_next_PC_share0000_cy<2> (nexPC/Madd_next_PC_share0000_cy<2>)
+     MUXCY:CI->O           1   0.051   0.000  nexPC/Madd_next_PC_share0000_cy<3> (nexPC/Madd_next_PC_share0000_cy<3>)
+     MUXCY:CI->O           1   0.051   0.000  nexPC/Madd_next_PC_share0000_cy<4> (nexPC/Madd_next_PC_share0000_cy<4>)
+     MUXCY:CI->O           1   0.051   0.000  nexPC/Madd_next_PC_share0000_cy<5> (nexPC/Madd_next_PC_share0000_cy<5>)
+     MUXCY:CI->O           1   0.052   0.000  nexPC/Madd_next_PC_share0000_cy<6> (nexPC/Madd_next_PC_share0000_cy<6>)
+     MUXCY:CI->O           1   0.052   0.000  nexPC/Madd_next_PC_share0000_cy<7> (nexPC/Madd_next_PC_share0000_cy<7>)
+     MUXCY:CI->O           1   0.052   0.000  nexPC/Madd_next_PC_share0000_cy<8> (nexPC/Madd_next_PC_share0000_cy<8>)
+     MUXCY:CI->O           1   0.052   0.000  nexPC/Madd_next_PC_share0000_cy<9> (nexPC/Madd_next_PC_share0000_cy<9>)
+     MUXCY:CI->O           1   0.052   0.000  nexPC/Madd_next_PC_share0000_cy<10> (nexPC/Madd_next_PC_share0000_cy<10>)
+     MUXCY:CI->O           1   0.052   0.000  nexPC/Madd_next_PC_share0000_cy<11> (nexPC/Madd_next_PC_share0000_cy<11>)
+     MUXCY:CI->O           1   0.052   0.000  nexPC/Madd_next_PC_share0000_cy<12> (nexPC/Madd_next_PC_share0000_cy<12>)
+     MUXCY:CI->O           1   0.052   0.000  nexPC/Madd_next_PC_share0000_cy<13> (nexPC/Madd_next_PC_share0000_cy<13>)
+     MUXCY:CI->O           1   0.052   0.000  nexPC/Madd_next_PC_share0000_cy<14> (nexPC/Madd_next_PC_share0000_cy<14>)
+     MUXCY:CI->O           1   0.052   0.000  nexPC/Madd_next_PC_share0000_cy<15> (nexPC/Madd_next_PC_share0000_cy<15>)
+     MUXCY:CI->O           1   0.052   0.000  nexPC/Madd_next_PC_share0000_cy<16> (nexPC/Madd_next_PC_share0000_cy<16>)
+     MUXCY:CI->O           1   0.052   0.000  nexPC/Madd_next_PC_share0000_cy<17> (nexPC/Madd_next_PC_share0000_cy<17>)
+     MUXCY:CI->O           1   0.052   0.000  nexPC/Madd_next_PC_share0000_cy<18> (nexPC/Madd_next_PC_share0000_cy<18>)
+     MUXCY:CI->O           1   0.052   0.000  nexPC/Madd_next_PC_share0000_cy<19> (nexPC/Madd_next_PC_share0000_cy<19>)
+     MUXCY:CI->O           1   0.052   0.000  nexPC/Madd_next_PC_share0000_cy<20> (nexPC/Madd_next_PC_share0000_cy<20>)
+     MUXCY:CI->O           1   0.052   0.000  nexPC/Madd_next_PC_share0000_cy<21> (nexPC/Madd_next_PC_share0000_cy<21>)
+     MUXCY:CI->O           1   0.052   0.000  nexPC/Madd_next_PC_share0000_cy<22> (nexPC/Madd_next_PC_share0000_cy<22>)
+     MUXCY:CI->O           1   0.052   0.000  nexPC/Madd_next_PC_share0000_cy<23> (nexPC/Madd_next_PC_share0000_cy<23>)
+     MUXCY:CI->O           1   0.052   0.000  nexPC/Madd_next_PC_share0000_cy<24> (nexPC/Madd_next_PC_share0000_cy<24>)
+     MUXCY:CI->O           1   0.052   0.000  nexPC/Madd_next_PC_share0000_cy<25> (nexPC/Madd_next_PC_share0000_cy<25>)
+     MUXCY:CI->O           1   0.052   0.000  nexPC/Madd_next_PC_share0000_cy<26> (nexPC/Madd_next_PC_share0000_cy<26>)
+     MUXCY:CI->O           1   0.052   0.000  nexPC/Madd_next_PC_share0000_cy<27> (nexPC/Madd_next_PC_share0000_cy<27>)
+     MUXCY:CI->O           1   0.052   0.000  nexPC/Madd_next_PC_share0000_cy<28> (nexPC/Madd_next_PC_share0000_cy<28>)
+     MUXCY:CI->O           1   0.052   0.000  nexPC/Madd_next_PC_share0000_cy<29> (nexPC/Madd_next_PC_share0000_cy<29>)
+     MUXCY:CI->O           0   0.052   0.000  nexPC/Madd_next_PC_share0000_cy<30> (nexPC/Madd_next_PC_share0000_cy<30>)
+     XORCY:CI->O           1   0.699   0.360  nexPC/Madd_next_PC_share0000_xor<31> (nexPC/next_PC_share0000<31>)
+     LUT4_L:I3->LO         1   0.612   0.130  nexPC/next_PC<31>3 (nexPC/next_PC<31>3)
+     LUT4:I2->O            1   0.612   0.000  nexPC/next_PC<31>19 (next_PC<31>)
+     FDRE:D                    0.268          pc_31
+    ----------------------------------------
+    Total                     10.443ns (7.642ns logic, 2.800ns route)
+                                       (73.2% logic, 26.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'stall_gen/stall_not0001'
+  Total number of paths / destination ports: 15 / 1
+-------------------------------------------------------------------------
+Offset:              4.835ns (Levels of Logic = 4)
+  Source:            idata<2> (PAD)
+  Destination:       stall_gen/stall (LATCH)
+  Destination Clock: stall_gen/stall_not0001 rising
+
+  Data Path: idata<2> to stall_gen/stall
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             5   1.106   0.690  idata_2_IBUF (idata_2_IBUF)
+     LUT4:I0->O            1   0.612   0.426  stall_gen/stall_mux0000230_SW0 (N377)
+     LUT3:I1->O            1   0.612   0.509  stall_gen/stall_mux0000230 (stall_gen/stall_mux0000230)
+     LUT3:I0->O            1   0.612   0.000  stall_gen/stall_mux0000246 (stall_gen/stall_mux0000)
+     LD_1:D                    0.268          stall_gen/stall
+    ----------------------------------------
+    Total                      4.835ns (3.210ns logic, 1.625ns route)
+                                       (66.4% logic, 33.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 264 / 260
+-------------------------------------------------------------------------
+Offset:              5.808ns (Levels of Logic = 2)
+  Source:            ex_mem/valid_propogate_0 (FF)
+  Destination:       we<3> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: ex_mem/valid_propogate_0 to we<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              84   0.514   1.156  ex_mem/valid_propogate_0 (ex_mem/valid_propogate_0)
+     LUT2:I1->O            1   0.612   0.357  we<3>1 (we_3_OBUF)
+     OBUF:I->O                 3.169          we_3_OBUF (we<3>)
+    ----------------------------------------
+    Total                      5.808ns (4.295ns logic, 1.513ns route)
+                                       (74.0% logic, 26.0% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 14.00 secs
+Total CPU time to Xst completion: 13.87 secs
+ 
+--> 
+
+
+Total memory usage is 565860 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  238 (   0 filtered)
+Number of infos    :   18 (   0 filtered)
+

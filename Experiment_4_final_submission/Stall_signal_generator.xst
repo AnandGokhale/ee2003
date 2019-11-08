@@ -1,0 +1,5 @@
+set -tmpdir "/home/anand/EE2003/Experiment_4_final_submission/xst/projnav.tmp"
+set -xsthdpdir "/home/anand/EE2003/Experiment_4_final_submission/xst"
+elaborate
+-ifn Stall_signal_generator.prj
+-ifmt mixed

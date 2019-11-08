@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "/home/anand/EE2003/Experiment_4_final_submission/IF.xst" -ofn "/home/anand/EE2003/Experiment_4_final_submission/IF.syr" 

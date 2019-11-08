@@ -1,3 +1,0 @@
-verilog isim_temp "imem.v"
-verilog isim_temp "IF.v"
-verilog isim_temp "/opt/tools/xilinx/ise/14.7/ISE_DS/ISE//verilog/src/glbl.v"

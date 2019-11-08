@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<DeviceUsageSummary rev="2">
+<DesignStatistics TimeStamp="Sat Nov  9 01:06:12 2019"><group name="MiscellaneousStatistics">
+<item name="AGG_SLICE" rev="2">
+<attrib name="value" value="395"/></item>
+<item name="NUM_4_INPUT_LUT" rev="2">
+<attrib name="value" value="274"/></item>
+<item name="NUM_BSCAN" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="NUM_BUFGMUX" rev="2">
+<attrib name="value" value="2"/></item>
+<item name="NUM_CYMUX" rev="2">
+<attrib name="value" value="41"/></item>
+<item name="NUM_DP_RAM" rev="2">
+<attrib name="value" value="2"/></item>
+<item name="NUM_LUT_RT" rev="2">
+<attrib name="value" value="43"/></item>
+<item name="NUM_SLICEL" rev="2">
+<attrib name="value" value="394"/></item>
+<item name="NUM_SLICEM" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="NUM_SLICE_FF" rev="2">
+<attrib name="value" value="460"/></item>
+<item name="NUM_XOR" rev="2">
+<attrib name="value" value="44"/></item>
+<item name="Xilinx Core chipscope_icon_v1_06_a, Xilinx CORE Generator 14.7" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="Xilinx Core chipscope_vio_v1_05_a, Xilinx CORE Generator 14.7" rev="2">
+<attrib name="value" value="1"/></item>
+</group>
+</DesignStatistics>
+<CmdHistory>
+</CmdHistory>
+</DeviceUsageSummary>
